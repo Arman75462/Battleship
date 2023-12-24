@@ -109,11 +109,40 @@ body {
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
+/* 1- MAIN */
+main {
+  text-align: center;
+}
+
+/* DIALOGUE SIZE */
+.dialogue {
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 2em auto;
+  color: whitesmoke;
+}
+
+/* TYPEWRITER ANIMATION */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.text {
+  opacity: 1;
+}
+
+/* 1- TITLE */
 h1 {
-  font-size: 6rem;
+  font-size: 8rem;
   color: #c0c0c0; /* Silver color for a metal plate look */
   text-shadow:
     2px 2px 4px #444,
     3px 3px 6px #444;
   text-align: center;
+  font-weight: 800;
 }
