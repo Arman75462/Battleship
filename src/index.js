@@ -7,10 +7,10 @@ const texts = [
 ];
 
 /* SELECTORS */
-const container = document.getElementById("container");
 const muteBtn = document.querySelector(".mute-btn");
 const startBattle = document.querySelector(".battle-btn");
 const main = document.querySelector(".main");
+const placeSubmarinesSection = document.querySelector(".place-submarines");
 
 // Typewriter function to write letter by letter the each text inside of texts array
 function typeWriter(element, text, i, speed) {
@@ -30,7 +30,7 @@ setTimeout(() => {
         const div = document.createElement("div");
         div.className = "opacity dialogue";
         typeWriter(div, text, 0, 60); // Adjust speed as needed
-        container.appendChild(div);
+        main.appendChild(div);
       },
       i * (text.length * 60 + 2000) // Adjust timing as needed, added 1.5 seconds delay
     );
@@ -56,7 +56,8 @@ muteBtn.addEventListener("click", () => {
   toggleMute();
 });
 
-// Hide the display of intro when clicking startBattle button
+// Hide the display of intro when clicking startBattle button and remove no-display of place-submarines section
 startBattle.addEventListener("click", () => {
   main.classList.add("no-display");
+  placeSubmarinesSection.classList.remove("no-display");
 });

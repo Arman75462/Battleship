@@ -92,6 +92,7 @@ GENERAL LAYOUT AND STYLES==
 ==============================*/
 :root {
   font-family: "Orbitron", sans-serif;
+  --whitesmoke: whitesmoke;
 }
 
 body {
@@ -106,50 +107,8 @@ body {
   min-height: 100vh;
 }
 
-/*============================
-SPECIFIC LAYOUT AND STYLES=
-==============================*/
-/* 1- MUTE-BUTTON  */
-.mute-btn {
-  position: absolute;
-  font-size: 3rem;
-  right: 0.3em;
-  top: 0.3em;
-  cursor: pointer;
-  transition: scale 250ms;
-}
-
-.mute-btn:hover {
-  scale: 1.1;
-}
-
 .no-display {
   display: none;
-}
-
-/* 1- TITLE */
-h1 {
-  font-size: 8rem;
-  color: #c0c0c0; /* Silver color for a metal plate look */
-  text-shadow:
-    0px 0px 10px rgba(255, 255, 255, 0.5),
-    3px 3px 6px #444;
-  text-align: center;
-  font-weight: 800;
-  margin-bottom: 0.5em;
-}
-
-/* 1- MAIN */
-main {
-  text-align: center;
-}
-
-/* DIALOGUE SIZE */
-.dialogue {
-  font-size: 1.5rem;
-  width: 50%;
-  margin-inline: auto;
-  color: whitesmoke;
 }
 
 /* TYPEWRITER ANIMATION */
@@ -166,7 +125,53 @@ main {
   opacity: 1;
 }
 
-/* 1- BATTLE-BUTTON */
+.title {
+  color: #c0c0c0; /* Silver color for a metal plate look */
+  text-shadow:
+    0px 0px 10px rgba(255, 255, 255, 0.5),
+    3px 3px 6px #444;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+}
+
+/*============================
+SPECIFIC LAYOUT AND STYLES=
+==============================*/
+
+/* 1- MAIN */
+main {
+  text-align: center;
+}
+
+/* 2- TITLE */
+h1 {
+  font-size: 8rem;
+}
+
+/* 2- MUTE-BUTTON  */
+.mute-btn {
+  position: absolute;
+  font-size: 3rem;
+  right: 0.3em;
+  top: 0.3em;
+  cursor: pointer;
+  transition: scale 250ms;
+}
+
+.mute-btn:hover {
+  scale: 1.1;
+}
+
+/* 2- DIALOGUE SIZE */
+.dialogue {
+  font-size: 1.5rem;
+  width: 50%;
+  margin-inline: auto;
+  color: var(--whitesmoke);
+}
+
+/* 2- BATTLE-BUTTON */
 .battle-btn {
   padding: 0.5em 1em;
   font-size: 1.5rem;
@@ -181,4 +186,35 @@ main {
 
 .battle-btn:hover {
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+/* 1- PLACE-SUBMARINES SECTION */
+/*  2- THE TITLE */
+h2 {
+  font-size: 4rem;
+}
+
+/* 2- TEXT */
+.place-submarines > p {
+  color: var(--whitesmoke);
+  margin-inline: auto;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 2- GAMEBOARD */
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  justify-content: center;
+  gap: 2px;
+}
+
+.gameboard > div {
+  border: 2px solid var(--whitesmoke);
+  border-radius: 3px;
+  cursor: crosshair;
 }
