@@ -109,6 +109,32 @@ body {
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
+/* 1- MUTE-BUTTON  */
+.mute-btn {
+  position: absolute;
+  font-size: 3rem;
+  right: 0.3em;
+  top: 0.3em;
+  cursor: pointer;
+  transition: scale 250ms;
+}
+
+.mute-btn:hover {
+  scale: 1.1;
+}
+
+/* 1- TITLE */
+h1 {
+  font-size: 8rem;
+  color: #c0c0c0; /* Silver color for a metal plate look */
+  text-shadow:
+    2px 2px 4px #444,
+    3px 3px 6px #444;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+}
+
 /* 1- MAIN */
 main {
   text-align: center;
@@ -118,7 +144,7 @@ main {
 .dialogue {
   font-size: 1.5rem;
   width: 50%;
-  margin: 2em auto;
+  margin-inline: auto;
   color: whitesmoke;
 }
 
@@ -132,17 +158,23 @@ main {
   }
 }
 
-.text {
+.opacity {
   opacity: 1;
 }
 
-/* 1- TITLE */
-h1 {
-  font-size: 8rem;
-  color: #c0c0c0; /* Silver color for a metal plate look */
-  text-shadow:
-    2px 2px 4px #444,
-    3px 3px 6px #444;
-  text-align: center;
-  font-weight: 800;
+/* 1- BATTLE-BUTTON */
+.battle-btn {
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 2em;
+  transition: all 300ms;
+}
+
+.battle-btn:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
