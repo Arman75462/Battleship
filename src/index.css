@@ -1,4 +1,4 @@
-/* Your Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
 
 /*============================
 RESETS=====================
@@ -90,19 +90,18 @@ button {
 /*============================
 GENERAL LAYOUT AND STYLES==
 ==============================*/
+:root {
+  font-family: "Orbitron", sans-serif;
+}
 
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
-
-/*============================
-MEDIA QUERIES==============
-==============================*/
-
-/*============================
-GENERAL LAYOUT AND STYLES==
-==============================*/
-
-/*============================
-SPECIFIC LAYOUT AND STYLES=
-==============================*/
+h1 {
+  font-size: 6rem;
+  color: #c0c0c0; /* Silver color for a metal plate look */
+  text-shadow:
+    2px 2px 4px #444,
+    3px 3px 6px #444;
+  text-align: center;
+}
