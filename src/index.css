@@ -111,6 +111,10 @@ body {
   display: none;
 }
 
+.display {
+  display: inline;
+}
+
 /* TYPEWRITER ANIMATION */
 @keyframes fadeOut {
   0% {
@@ -138,18 +142,7 @@ body {
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
-
-/* 1- MAIN */
-main {
-  text-align: center;
-}
-
-/* 2- TITLE */
-h1 {
-  font-size: 8rem;
-}
-
-/* 2- MUTE-BUTTON  */
+/* 1- MUTE-BUTTON  */
 .mute-btn {
   position: absolute;
   font-size: 3rem;
@@ -161,6 +154,16 @@ h1 {
 
 .mute-btn:hover {
   scale: 1.1;
+}
+
+/* 1- MAIN */
+main {
+  text-align: center;
+}
+
+/* 2- TITLE */
+h1 {
+  font-size: 8rem;
 }
 
 /* 2- DIALOGUE SIZE */

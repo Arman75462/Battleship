@@ -51,7 +51,7 @@ function toggleMute() {
   }
 }
 
-// Toogle audio sound when clicking muteBtn
+// Toggle audio sound when clicking muteBtn
 muteBtn.addEventListener("click", () => {
   toggleMute();
 });
