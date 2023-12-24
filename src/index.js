@@ -5,8 +5,12 @@ const texts = [
   "As the chosen defender, you must place your submarines strategically and lead us to victory.",
   "The fate of our land rests on YOUR shoulders. Will you become a legend, or will you cower and leave us?",
 ];
+
+/* SELECTORS */
 const container = document.getElementById("container");
 const muteBtn = document.querySelector(".mute-btn");
+const startBattle = document.querySelector(".battle-btn");
+const main = document.querySelector(".main");
 
 // Typewriter function to write letter by letter the each text inside of texts array
 function typeWriter(element, text, i, speed) {
@@ -28,14 +32,14 @@ setTimeout(() => {
         typeWriter(div, text, 0, 60); // Adjust speed as needed
         container.appendChild(div);
       },
-      i * (text.length * 60 + 2500) // Adjust timing as needed, added 1.5 seconds delay
+      i * (text.length * 60 + 2000) // Adjust timing as needed, added 1.5 seconds delay
     );
   });
 }, 1000);
 
+// Mutes or unmutes music
 function toggleMute() {
   const audio = document.getElementById("background-music");
-
   if (audio.muted) {
     audio.muted = false;
     muteBtn.textContent = "🔊"; // Change the icon to unmuted
@@ -47,6 +51,12 @@ function toggleMute() {
   }
 }
 
-muteBtn.addEventListener("click", function () {
+// Toogle audio sound when clicking muteBtn
+muteBtn.addEventListener("click", () => {
   toggleMute();
+});
+
+// Hide the display of intro when clicking startBattle button
+startBattle.addEventListener("click", () => {
+  main.classList.add("no-display");
 });
