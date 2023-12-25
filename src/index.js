@@ -12,8 +12,16 @@ const startBattle = document.querySelector(".battle-btn");
 const main = document.querySelector(".main");
 const placeSubmarinesSection = document.querySelector(".place-submarines");
 const gameboard = document.querySelector(".gameboard");
-const gameboardCells = document.querySelectorAll(".gameboard-cell");
 const warships = document.querySelectorAll(".warship");
+
+// Create 100 gameboard-cells inside of gameboard
+for (let i = 0; i < 100; i++) {
+  const div = document.createElement("div");
+  div.className = "gameboard-cell";
+  gameboard.appendChild(div);
+}
+
+const gameBoardCells = document.querySelectorAll(".gameboard-cell");
 
 // Typewriter function to write letter by letter the each text inside of texts array
 function typeWriter(element, text, i, speed) {
@@ -65,26 +73,6 @@ startBattle.addEventListener("click", () => {
   placeSubmarinesSection.classList.remove("no-display");
 });
 
-/* DRAG FUNCTIONALITY */
-// To make the opacity of the dragged element 0.5
-warships.forEach((warship) => {
-  warship.ondragstart = () => {
-    warship.style.opacity = "0.5";
-  };
-});
-
-// To make the opacity of the previously dragged element 1
-warships.forEach((warship) => {
-  warship.ondragend = () => {
-    warship.style.opacity = "1";
-  };
-});
-
-/* if(warship is draggedOnCells, the cells that are currently being dragged over) {
-    make their color green
-} 
-*/
-
 // Factory function for warships
 function createWarship(length, hits, sunk) {
   return {
@@ -108,3 +96,23 @@ const battlefront = createWarship(4, 0, false);
 const destroyer = createWarship(3, 0, false);
 const submarine = createWarship(3, 0, false);
 const patrolBoat = createWarship(2, 0, false);
+
+/* DRAG FUNCTIONALITY */
+// To make the opacity of the dragged element 0.5
+warships.forEach((warship) => {
+  warship.ondragstart = () => {
+    warship.style.opacity = "0.5";
+  };
+});
+
+// To make the opacity of the previously dragged element 1
+warships.forEach((warship) => {
+  warship.ondragend = () => {
+    warship.style.opacity = "1";
+  };
+});
+
+/* if(warship is draggedOnCells, the cells that are currently being dragged over) {
+    make their color green
+} 
+*/
