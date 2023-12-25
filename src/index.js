@@ -101,3 +101,10 @@ function createWarship(length, hits, sunk) {
     },
   };
 }
+
+// Created warships
+const carrier = createWarship(5, 0, false);
+const battlefront = createWarship(4, 0, false);
+const destroyer = createWarship(3, 0, false);
+const submarine = createWarship(3, 0, false);
+const patrolBoat = createWarship(2, 0, false);
