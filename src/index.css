@@ -129,6 +129,7 @@ body {
   opacity: 1;
 }
 
+/* Default title styles */
 .title {
   color: #c0c0c0; /* Silver color for a metal plate look */
   text-shadow:
@@ -202,21 +203,97 @@ h2 {
   color: var(--whitesmoke);
   margin-inline: auto;
   font-size: 1.5rem;
-  margin-bottom: 1em;
   text-align: center;
   font-weight: 600;
+}
+
+/* 2- WARSHIPS CONTAINER */
+.warships-container {
+  width: fit-content;
+  margin: 0em auto;
+}
+
+.warship {
+  display: inline-block;
+  margin-right: 2em;
+  cursor: grab;
+  height: 2em;
+  width: 2em;
+
+  transition: scale 300ms;
+}
+
+.warship:hover {
+  scale: 1.1;
+}
+
+.carrier {
+  background: linear-gradient(
+    45deg,
+    #5a5a5a,
+    #bfbfbf
+  ); /* Haze Gray for carrier */
+  width: 12.5em;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.battleship {
+  background: linear-gradient(
+    45deg,
+    #000000,
+    #333333
+  ); /* Dull Black for battleship */
+  width: 10em;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.destroyer {
+  background: linear-gradient(
+    45deg,
+    #4a4a4a,
+    #a6a6a6
+  ); /* Navy Gray for destroyer */
+  width: 7.5em;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+
+.submarine {
+  background: linear-gradient(
+    45deg,
+    #000052,
+    #3838ff
+  ); /* Navy Blue for submarine */
+  width: 7.5em;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.patrol-boat {
+  background: linear-gradient(
+    45deg,
+    #003300,
+    #006600
+  ); /* Dark Green for patrol boat */
+  width: 5em;
+  border-radius: 10px;
 }
 
 /* 2- GAMEBOARD */
 .gameboard {
   display: grid;
-  grid-template-columns: repeat(10, 50px);
-  grid-template-rows: repeat(10, 50px);
+  grid-template-columns: repeat(10, 2.5em);
+  grid-template-rows: repeat(10, 2.5em);
   justify-content: center;
   gap: 2px;
+  margin-top: 3em;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
-.gameboard > div {
+.gameboard-cell {
   border: 2px solid var(--whitesmoke);
   border-radius: 3px;
   cursor: crosshair;

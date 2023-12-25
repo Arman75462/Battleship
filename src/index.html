@@ -16,7 +16,7 @@
     <span class="mute-btn display">🔇</span>
 
     <!-- 1- MAIN -->
-    <main class="main">
+    <main class="main no-display">
       <!-- Audio player placed here without controls -->
       <audio id="background-music" loop>
         <source
@@ -34,115 +34,124 @@
     </main>
 
     <!-- 1- PLACE-SUBMARINES SECTION -->
-    <section class="place-submarines no-display">
+    <section class="place-submarines display">
       <!-- 2- THE TITLE -->
       <h2 class="title">BATTLEFIELD</h2>
 
       <!-- 2- TEXT -->
       <p>Place your warships:</p>
 
+      <!-- 2- WARSHIPS CONTAINER -->
+      <article class="warships-container">
+        <div class="carrier warship"></div>
+        <div class="battleship warship"></div>
+        <div class="destroyer warship"></div>
+        <div class="submarine warship"></div>
+        <div class="patrol-boat warship"></div>
+      </article>
+
       <!-- 2- GAMEBOARD -->
       <article class="gameboard">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
+        <div class="gameboard-cell"></div>
       </article>
     </section>
   </body>

@@ -11,6 +11,8 @@ const muteBtn = document.querySelector(".mute-btn");
 const startBattle = document.querySelector(".battle-btn");
 const main = document.querySelector(".main");
 const placeSubmarinesSection = document.querySelector(".place-submarines");
+const gameboard = document.querySelector(".gameboard");
+const gameboardCells = document.querySelectorAll(".gameboard-cell");
 
 // Typewriter function to write letter by letter the each text inside of texts array
 function typeWriter(element, text, i, speed) {
@@ -61,3 +63,7 @@ startBattle.addEventListener("click", () => {
   main.classList.add("no-display");
   placeSubmarinesSection.classList.remove("no-display");
 });
+
+/* gameboardCells.forEach((cell) => {
+  cell.style.background = "red";
+}); */
