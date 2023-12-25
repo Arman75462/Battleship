@@ -13,11 +13,7 @@ const main = document.querySelector(".main");
 const placeSubmarinesSection = document.querySelector(".place-submarines");
 const gameboard = document.querySelector(".gameboard");
 const gameboardCells = document.querySelectorAll(".gameboard-cell");
-const carrier = document.querySelector(".carrier");
-const battleship = document.querySelector(".battleship");
-const destroyer = document.querySelector(".destroyer");
-const submarine = document.querySelector(".submarine");
-const patrolBoat = document.querySelector(".patrol-boat");
+const warships = document.querySelectorAll(".warship");
 
 // Typewriter function to write letter by letter the each text inside of texts array
 function typeWriter(element, text, i, speed) {
@@ -69,29 +65,39 @@ startBattle.addEventListener("click", () => {
   placeSubmarinesSection.classList.remove("no-display");
 });
 
-/* gameboardCells.forEach((cell) => {
-  cell.style.background = "red";
-}); */
-
 /* DRAG FUNCTIONALITY */
-carrier.ondragstart = () => {
-  // To make the opacity of the dragged element 0.5
-  carrier.classList.add("dragging");
-  // To know that element being dragged
-  carrier.classList.add("isBeingDragged");
-};
+// To make the opacity of the dragged element 0.5
+warships.forEach((warship) => {
+  warship.ondragstart = () => {
+    warship.style.opacity = "0.5";
+  };
+});
 
-carrier.ondragend = () => {
-  // To make the opacity of the dragged element back to original
-  carrier.classList.remove("dragging");
-  // To know that element is not being dragged anymore
-  carrier.classList.remove("isBeingDragged");
-};
+// To make the opacity of the previously dragged element 1
+warships.forEach((warship) => {
+  warship.ondragend = () => {
+    warship.style.opacity = "1";
+  };
+});
 
-/* DRAG ELEMENTS */
-/* if(draggedWarship is over cells) {
-  1- make those cells the same color as the color of the dragged warship
-  2- Erase the existence of the draggedWarship in the warship options
-} */
+/* if(warship is draggedOnCells, the cells that are currently being dragged over) {
+    make their color green
+} 
+*/
 
-/* when the user start dragging an element, make the original draggedWarship of opacity 0.5. If the draggedWarship hasnt been placed, make the opacity of the original draggedWarship to 1. */
+// Factory function for warships
+function createWarship(length, hits, sunk) {
+  return {
+    length,
+    hits,
+    sunk,
+    hit() {
+      this.hits = this.hits + 1;
+    },
+    isSunkVerification() {
+      if (this.hits === this.length) {
+        this.sunk = true;
+      }
+    },
+  };
+}
